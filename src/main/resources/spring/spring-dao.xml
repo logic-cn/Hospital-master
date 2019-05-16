@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="classpath:*.properties"/>
-    <context:component-scan base-package="com.ming.hospital.dao"/>
+    <context:component-scan base-package="com.ming.hospital.dao,com.ming.hospital.admin.dao"/>
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
@@ -22,13 +22,13 @@
 
     <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
         <property name="dataSource" ref="dataSource"/>
-        <property name="typeAliasesPackage" value="com.ming.hospital.pojo" />
+        <property name="typeAliasesPackage" value="com.ming.hospital.pojo,com.ming.hospital.admin.pojo" />
         <property name="mapperLocations" value="classpath:mapper/*.xml" />
         <property name="configLocation" value="classpath:sqlMapConfig.xml" />
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" id="mapperScannerConfigurer" >
-        <property name="basePackage" value="com.ming.hospital.dao"/>
+        <property name="basePackage" value="com.ming.hospital.dao,com.ming.hospital.admin.dao"/>
     </bean>
 
 

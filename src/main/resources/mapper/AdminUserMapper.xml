@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace表示命名空间 -->
-<mapper namespace="com.mysys.mapper.AdminUserMapper">
-	<resultMap type="User" id="UserResult">
+<mapper namespace="com.ming.hospital.admin.dao.AdminUserMapper">
+	<resultMap type="AdminUser" id="UserResult">
 		<id property="id" column="id" />
 		<result property="loginname" column="LoginN" />
 		<result property="password" column="password" />
