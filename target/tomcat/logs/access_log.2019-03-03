@@ -1,9 +1,0 @@
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:15 +0800] "GET /Hospital HTTP/1.1" 302 - http-bio-8080-exec-2 0
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:16 +0800] "GET /Hospital/ HTTP/1.1" 200 24081 http-bio-8080-exec-3 1196
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:17 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:34 +0800] "GET /Hospital/hospital/hospitalList HTTP/1.1" 200 19800 http-bio-8080-exec-5 257
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:40 +0800] "GET /Hospital/hospital/hospitalList/?grade=1&name=&insurance=&times= HTTP/1.1" 200 11655 http-bio-8080-exec-7 56
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:40 +0800] "GET /Hospital/images/button-next-gray.png HTTP/1.1" 404 1023 http-bio-8080-exec-8 4
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:44 +0800] "GET /Hospital/hospital/hospitalList/?grade=3&name=&insurance=&times= HTTP/1.1" 200 14333 http-bio-8080-exec-9 159
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:44 +0800] "GET /Hospital/images/button-next-gray.png HTTP/1.1" 404 1023 http-bio-8080-exec-9 2
-0:0:0:0:0:0:0:1 - - [03/Mar/2019:12:34:49 +0800] "GET /Hospital/ HTTP/1.1" 200 24081 http-bio-8080-exec-9 144
