@@ -61,16 +61,19 @@
                             <div style="margin-top:2px">密码：<input type="password" name="pwd" id="pwd" style="border: 1px solid #2896f3;"/></div>
                         </form>
                     </div>
-                    <div style="float: right;line-height:42px;margin-left:15px">
+                    <div style="float: right;line-height:42px;margin-left:5px">
                         <div><input type="button" value="登&nbsp;录" onClick="login()"
                                     style="width:40px;height:40px;cursor:pointer;border: 1px solid #2896f3;color:#2896f3;"></input>
                         </div>
-                        <div style="position: absolute;top: 0px;left: 280px">
+                        <div style="position: absolute;top: 0px;left: 240px">
                             <a href="${pageContext.request.contextPath}/register.jsp">
                                 <input type="button" value="注&nbsp;册" style="width:40px;height:40px;cursor:pointer;border: 1px solid #2896f3;color:#2896f3;"></input>
                             </a>
+
+                        </div>
+                        <div style="position: absolute;top: 0px;left: 300px" >
                             <a href="logout">
-                                <input type="button" value="超级管理员" style="width:40px;height:40px;cursor:pointer;border: 1px solid #2896f3;color:#2896f3;"></input>
+                                <input type="button" value="超级管理员" style="width:60px;height:40px;cursor:pointer;border: 1px solid #2896f3;color:#2896f3;"></input>
                             </a>
 
                         </div>
