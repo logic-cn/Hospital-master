@@ -30,10 +30,6 @@
 	src="${ctx }/js/My97DatePicker/WdatePicker.js"></script>
 <script type="text/javascript">
 	$(function(){
-		// 控制文档加载完成以后 选中性别 
-		$("#sex").val("${employee.sex}");
-		$("#job_id").val("${employee.job.id}");
-		
     	/** 员工表单提交 */
 		$("#employeeForm").submit(function(){
 			alert("确认修改？");
@@ -71,11 +67,11 @@
 		cellspacing="0" class="main_tabbor">
 		<tr valign="top">
 			<td>
-				<form action="${ctx}/adminUser/add" id="employeeForm"
-					method="post">
+				<form action="${ctx}/adminUser/add?id=${adminUser.id }" method="post">
 					<!-- 隐藏表单，flag表示添加标记 -->
-					<input type="hidden" name="flag" value="2"> <input
-						type="hidden" name="id" value="${doctor.id }">
+					<%--<input type="hidden" name="flag" value="2"> --%>
+					<input type="hidden" name="id" value="${adminUser.id }">
+					<%--<input type="hidden" name="status" value="${doctor.status }">--%>
 					<table width="100%" border="0" cellpadding="0" cellspacing="10"
 						class="main_tab">
 						<tr>
@@ -86,16 +82,16 @@
 
 										<td class="font3 fftd">登录名：
 											<input type="text" name="loginname"
-												   id="loginname" size="20" value="${doctor.loginname }" />
+												   id="loginname" size="20" value="${adminUser.loginname }" />
 										</td>
-										<td class="font3 fftd">密码：<input name="password"
-											id="password" size="20" value="${doctor.password }" /></td>
+										<td class="font3 fftd">密码：<input type="password" name="password"
+											id="password" size="20" value="${adminUser.password }" /></td>
 									</tr>
 									<tr>
 										<td class="font3 fftd">用户名：<input type="text" name="username"
-											id="username" size="20" value="${doctor.username }" /></td>
-										<td class="font3 fftd">创建时间：<input type="text" name="createDate"
-											id="createDate" size="20" value="${doctor.createDate }" /></td>
+											id="username" size="20" value="${adminUser.username }" /></td>
+										<%--<td class="font3 fftd">创建时间：<input type="text" name="createDate"--%>
+											<%--id="createDate" size="20" value="${doctor.createDate }" /></td>--%>
 									</tr>
 
 						<tr>
@@ -103,8 +99,14 @@
 						</tr>
 
 						<tr>
-							<td align="left" class="fftd"><input type="submit"
-								value="修改">&nbsp;&nbsp;<input type="reset" value="取消 " onclick="javascript:window.history.back();return false;" 
+							<td align="left" class="fftd">
+								<c:if test="${adminUser != null}">
+									<input type="submit" value="修改">
+								</c:if>
+								<c:if test="${adminUser == null}">
+									<input type="submit" value="新增">
+								</c:if>
+								&nbsp;&nbsp;<input type="reset" value="取消 " onclick="javascript:window.history.back();return false;"
 								></td>
 						</tr>
 					</table>

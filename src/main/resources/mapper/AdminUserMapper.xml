@@ -78,7 +78,7 @@
 		(#{username},#{createDate},#{loginname},#{password})
 	</insert>
 
-	<select id="findAdminUserList" resultType="com.ming.hospital.admin.pojo.AdminUser">
+	<select id="findAdminUserList" resultMap="UserResult">
 		SELECT * FROM admin_user
 	</select>
 </mapper>

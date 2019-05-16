@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +29,9 @@ public class AdminUserController {
     @RequestMapping("list")
     public String getAdminUserList(Model model){
         List<AdminUser> adminUserList = adminUserService.findAdminUserList();
+        for (AdminUser adminUser: adminUserList) {
+            System.out.println(adminUser.toString());
+        }
         model.addAttribute("adminUserList", adminUserList);
         return "admin/jsp/user/user";
     }
@@ -37,7 +41,11 @@ public class AdminUserController {
      * @return
      */
     @RequestMapping(value = "add", method = RequestMethod.GET)
-    public String addAdminUserFrom(){
+    public String addAdminUserFrom(String id, Model model){
+        if (id !=null && !id.isEmpty()){
+            AdminUser adminUser = adminUserService.findUserById(Integer.parseInt(id));
+            model.addAttribute("adminUser", adminUser);
+        }
         return "admin/jsp/user/showAddUser";
     }
 
@@ -45,8 +53,28 @@ public class AdminUserController {
      * 添加修改操作
      */
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String addAdminUser(AdminUser user){
-        adminUserService.addUser(user);
-        return "admin/jsp/user/user";
+    public String addAdminUser(AdminUser user, String id){
+        if (id !=null && !id.isEmpty()){
+            adminUserService.modifyUser(user);
+        }else {
+            user.setStatus(1);
+            user.setCreateDate(new Date());
+            adminUserService.addUser(user);
+        }
+        return "redirect:/adminUser/list";
+    }
+
+    /**
+     * 批量删除
+     * @param ids
+     * @return
+     */
+    @RequestMapping("removeAdmin")
+    public String removeAdmin(String ids){
+        String[] identifiers= ids.split(",");
+        for (String id:identifiers) {
+            adminUserService.removeUserById(Integer.parseInt(id));
+        }
+        return "redirect:/adminUser/list";
     }
 }

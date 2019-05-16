@@ -69,7 +69,7 @@
 													if (r) {
 														// alert("删除："+ids.get());
 														// 发送请求
-														window.location = "${ctx }/employee/removeEmployee?ids="
+														window.location = "${ctx }/adminUser/removeAdmin?ids="
 																+ ids.get();
 													}
 												});
@@ -160,7 +160,7 @@
 							<%--<td><f:formatDate value="${employee.createDate}" type="date"--%>
 									<%--dateStyle="long" /></td>--%>
 							<td align="center" width="40px;"><a
-								href="${ctx}/adminUser/update?flag=1&id=${employee.id}">
+								href="${ctx}/adminUser/add?flag=1&id=${employee.id}">
 									<img title="修改" src="${ctx}/images/update.gif" />
 							</a></td>
 						</tr>
