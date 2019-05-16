@@ -61,7 +61,7 @@ public class LoginController {
 		// System.out.println("********end*********");
 		if (null != login) {
 			if (login.getIdentifyingcode().equalsIgnoreCase(randomString)) {
-				System.out.println("登录信息====" + login.getLoginname().trim() + login.getPassword().trim());
+				//System.out.println("登录信息====" + login.getLoginname().trim() + login.getPassword().trim());
 				AdminUser user = AdminUserService.login(login.getLoginname().trim(), login.getPassword().trim());
 				 //System.out.println(user);
 				session.setAttribute("USERS_SESSION", user);

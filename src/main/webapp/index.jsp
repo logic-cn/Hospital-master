@@ -93,6 +93,9 @@
             </a><a href="doctor/doctorList">
             <li>找医生</li>
         </a>
+            <a href="noticeIndex">
+                <li>新闻</li>
+            </a>
         </ul>
     </div>
 </div>
