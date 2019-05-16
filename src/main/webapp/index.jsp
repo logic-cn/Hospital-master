@@ -69,12 +69,14 @@
                             <a href="${pageContext.request.contextPath}/register.jsp">
                                 <input type="button" value="注&nbsp;册" style="width:40px;height:40px;cursor:pointer;border: 1px solid #2896f3;color:#2896f3;"></input>
                             </a>
-                            <div style="position: absolute;top: 0px;left: 300px" >
+
+                          </div>
+                        <div style="position: absolute;top: 0px;left: 300px" >
                             <a href="/admin/login.jsp">
                                 <input type="button" value="超级管理员" style="width:60px;height:40px;cursor:pointer;border: 1px solid #2896f3;color:#2896f3;"></input>
                             </a>
-                            </div>
-                          </div>
+
+                        </div>
                 </div>
             </div>
         </c:if>
