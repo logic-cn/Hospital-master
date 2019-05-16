@@ -71,11 +71,11 @@
 		where id = #{id}
 	</update>
 
-	<insert id="save" parameterType="User">
+	<insert id="save" parameterType="com.ming.hospital.admin.pojo.AdminUser">
 		insert into admin_user
-		(username,status,loginN,password)
+		(username,CreateDate,LoginN,password)
 		values
-		(#{username},#{status},#{loginname},#{password})
+		(#{username},#{createDate},#{loginname},#{password})
 	</insert>
 
 	<select id="findAdminUserList" resultType="com.ming.hospital.admin.pojo.AdminUser">
