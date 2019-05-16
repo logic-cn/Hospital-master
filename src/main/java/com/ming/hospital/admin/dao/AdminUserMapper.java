@@ -35,4 +35,6 @@ public interface AdminUserMapper {
 	// 动态插入用户
 	void save(AdminUser user);
 
+	List<AdminUser> findAdminUserList();
+
 }

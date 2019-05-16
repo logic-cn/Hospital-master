@@ -1,8 +1,8 @@
 package com.ming.hospital.admin.service.impl;
 
-import com.ming.hospital.admin.service.AdminDoctorService;
-import com.ming.hospital.dao.DoctorMapper;
-import com.ming.hospital.pojo.Doctor;
+import com.ming.hospital.admin.service.AdminHospitalService;
+import com.ming.hospital.dao.HospitalMapper;
+import com.ming.hospital.pojo.Hospital;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -16,21 +16,13 @@ import java.util.List;
  */
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
 @Service
-public class AdminDoctorServiceImpl implements AdminDoctorService{
+public class AdminHospitalServiceImpl implements AdminHospitalService {
 
     @Autowired
-    private DoctorMapper doctorMapper;
-
-
-    @Override
-    public List<Doctor> getDoctorList() {
-        return doctorMapper.selectDoctorList();
-    }
+    private HospitalMapper hospitalMapper;
 
     @Override
-    public Doctor selectDoctorById(Long id) {
-        return doctorMapper.selectById(id);
+    public List<Hospital> findHospitalList() {
+        return hospitalMapper.findHospitalList();
     }
-
-
 }

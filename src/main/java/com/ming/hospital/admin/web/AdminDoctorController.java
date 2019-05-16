@@ -26,19 +26,32 @@ public class AdminDoctorController {
      * @return
      */
     @RequestMapping("list")
-    public String getDoctorList(){
+    public String getDoctorList(Model model){
         List<Doctor> doctorList = adminDoctorService.getDoctorList();
-        return null;
+        model.addAttribute("doctorList", doctorList);
+        return "/admin/jsp/doctor/doctor";
     }
 
     /**
-     * 添加修改路由
+     * 添加路由
      * @return
      */
     @RequestMapping(value = "add",  method = RequestMethod.GET)
     public String addDoctorFrom(){
-        return null;
+        return "/admin/jsp/doctor/showAddDoctor";
     }
+
+    /**
+     * 修改路由
+     * @return
+     */
+    @RequestMapping(value = "update",  method = RequestMethod.GET)
+    public String updateDoctorFrom(Long id, Model model){
+        Doctor doctor = adminDoctorService.selectDoctorById(id);
+        model.addAttribute("doctor", doctor);
+        return "/admin/jsp/doctor/showUpdateDoctor";
+    }
+
 
     /**
      * 添加修改操作
@@ -48,7 +61,8 @@ public class AdminDoctorController {
      */
     @RequestMapping(value = "add",  method = RequestMethod.POST)
     public String addDoctor(Doctor doctor, Model model){
-        return null;
+        System.out.println(doctor.toString());
+        return "/admin/jsp/doctor/doctor";
     }
 
     /**

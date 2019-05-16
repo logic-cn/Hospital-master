@@ -29,12 +29,12 @@
 				<div class="enterMessage">
 					<div class="passworld"></div>
 					<input type="text" placeholder="请输入用户名" class="userText"
-						name="loginname">
+						name="loginname" value="admin">
 				</div>
 				<div class="enterMessage">
 					<div class="passworld"></div>
 					<input type="password" placeholder="请输入密码" class="passworldText"
-						name="password">
+						name="password" value="123">
 				</div>
 				<div class="enterMessage">
 					<div class="code"></div>

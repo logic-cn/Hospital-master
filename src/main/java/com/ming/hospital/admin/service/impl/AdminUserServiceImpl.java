@@ -16,6 +16,7 @@ import java.util.Map;
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
 @Service
 public class AdminUserServiceImpl implements AdminUserService {
+
 	@Autowired
 	private AdminUserMapper usermapper;
 
@@ -37,6 +38,11 @@ public class AdminUserServiceImpl implements AdminUserService {
 	@Override
 	public Integer count(AdminUser user) {
 		return usermapper.getCount(user);
+	}
+
+	@Override
+	public List<AdminUser> findAdminUserList() {
+		return usermapper.findAdminUserList();
 	}
 
 	@Override

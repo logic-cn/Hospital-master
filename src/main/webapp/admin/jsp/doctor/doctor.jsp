@@ -144,37 +144,37 @@
 						<td><input type="checkbox" name="checkAll" id="checkAll"></td>
 						<td>姓名</td>
 						<td>性别</td>
-						<td>手机号码</td>
-						<td>邮箱</td>
-						<td>职位</td>
-						<td>学历</td>
-						<td>身份证号码</td>
-						<td>部门</td>
-						<td>联系地址</td>
-						<td>建档日期</td>
+						<td>所属医院</td>
+						<td>分数</td>
+						<td>等级</td>
+						<td>科室</td>
+						<td>擅长诊治</td>
+						<td>简介</td>
+						<td>工作时间</td>
 						<td align="center">操作</td>
 					</tr>
-					<c:forEach items="${requestScope.employees}" var="employee"
+					<c:forEach items="${doctorList}" var="employee"
 						varStatus="stat">
 						<tr id="data_${stat.index}" class="main_trbg" align="center">
 							<td><input type="checkbox" id="box_${stat.index}"
-								value="${employee.id}"></td>
-							<td>${employee.name }</td>
-							<td><c:choose>
-									<c:when test="${employee.sex == 1 }">男</c:when>
-									<c:otherwise>女</c:otherwise>
-								</c:choose></td>
-							<td>${employee.phone }</td>
-							<td>${employee.email }</td>
-							<td>${employee.job.name }</td>
-							<td>${employee.education }</td>
-							<td>${employee.cardId }</td>
-							<td>${employee.dept.name }</td>
-							<td>${employee.address }</td>
-							<td><f:formatDate value="${employee.createDate}" type="date"
-									dateStyle="long" /></td>
+								value="${employee.did}"></td>
+							<td>${employee.dname }</td>
+							<%--<td><c:choose>--%>
+									<%--<c:when test="${employee.gender == 1 }">男</c:when>--%>
+									<%--<c:otherwise>女</c:otherwise>--%>
+								<%--</c:choose></td>--%>
+							<td>${employee.gender }</td>
+							<td>${employee.hid }</td>
+							<td>${employee.score }</td>
+							<td>${employee.grade }</td>
+							<td>${employee.deid }</td>
+							<td>${employee.skill }</td>
+							<td>${employee.description }</td>
+							<td>${employee.surgeryweek }</td>
+							<%--<td><f:formatDate value="${employee.createDate}" type="date"--%>
+									<%--dateStyle="long" /></td>--%>
 							<td align="center" width="40px;"><a
-								href="${ctx}/employee/updateEmployee?flag=1&id=${employee.id}">
+								href="${ctx}/doctor/update?flag=1&id=${employee.did}">
 									<img title="修改" src="${ctx}/images/update.gif" />
 							</a></td>
 						</tr>

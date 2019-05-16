@@ -53,4 +53,6 @@ public interface AdminUserService {
 	List<AdminUser> findUser(Map<String, Object> params);
 
 	Integer count(AdminUser user);
+
+	List<AdminUser> findAdminUserList();
 }

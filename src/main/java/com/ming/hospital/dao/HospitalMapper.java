@@ -36,4 +36,5 @@ public interface HospitalMapper {
 
    List<Hospital> getListByTop3();
 
+   List<Hospital> findHospitalList();
 }

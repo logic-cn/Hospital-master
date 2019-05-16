@@ -50,11 +50,11 @@
 		<tr valign="top">
 			<td height="50">
 				<p class="left_nav_link">
-					<a href="user/user" target="main">
+					<a href="${ctx}/adminUser/list" target="main">
 						<i class="layui-icon layui-icon-triangle-r">管理员查询</i></a>
 				</p>
 				<p class="left_nav_link">
-					<a href="/user/addUser?flag=1" target="main">
+					<a href="${ctx}/adminUser/add?flag=1" target="main">
 						<i class="layui-icon layui-icon-add-1">管理员添加</i></a>
 				</p>
 			</td>
@@ -70,11 +70,11 @@
 		<tr valign="top" id="submenu1" style="display: none">
 			<td class="left_nav_bgshw" height="50">
 				<p class="left_nav_link">
-					<a href="dept/selectDept" target="main">
+					<a href="${ctx}/hospital/list" target="main">
 						<i class="layui-icon layui-icon-triangle-r">医院查询</i></a>
 				</p>
 				<p class="left_nav_link">
-					<a href="dept/addDept?flag=1" target="main">
+					<a href="${ctx}/hospital/add?flag=1" target="main">
 						<i class="layui-icon layui-icon-add-1">医院添加</i></a>
 				</p>
 			</td>
@@ -110,11 +110,11 @@
 		<tr valign="top" id="submenu3" style="display: none">
 			<td class="left_nav_bgshw" height="50">
 				<p class="left_nav_link">
-					<a href="employee/selectEmployee" target="main">
+					<a href="${ctx}/doctor/list" target="main">
 						<i class="layui-icon layui-icon-triangle-r">医生查询</i></a>
 				</p>
 				<p class="left_nav_link">
-					<a href="employee/addEmployee?flag=1" target="main">
+					<a href="${ctx}/doctor/add?flag=1" target="main">
 						<i class="layui-icon layui-icon-add-1">添加医生</i></a>
 				</p>
 			</td>

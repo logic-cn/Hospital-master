@@ -10,4 +10,7 @@ import java.util.List;
 public interface AdminDoctorService {
 
     List<Doctor> getDoctorList();
+
+    Doctor selectDoctorById(Long id);
+
 }

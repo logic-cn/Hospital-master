@@ -143,24 +143,38 @@
 					<tr class="main_trbg_tit" align="center">
 						<td><input type="checkbox" name="checkAll" id="checkAll"></td>
 						<td>姓名</td>
-						<td>登录名</td>
-						<td>状态</td>
-						<td>创建时间</td>
+						<td>性别</td>
+						<td>所属医院</td>
+						<td>分数</td>
+						<td>等级</td>
+						<td>科室</td>
+						<td>擅长诊治</td>
+						<td>简介</td>
+						<td>工作时间</td>
 						<td align="center">操作</td>
 					</tr>
-					<c:forEach items="${adminUserList}" var="employee"
+					<c:forEach items="${doctorList}" var="employee"
 						varStatus="stat">
 						<tr id="data_${stat.index}" class="main_trbg" align="center">
 							<td><input type="checkbox" id="box_${stat.index}"
-								value="${employee.id}"></td>
-							<td>${employee.username }</td>
-							<td>${employee.loginname }</td>
-							<td>${employee.status }</td>
-							<td>${employee.createDate }</td>
+								value="${employee.did}"></td>
+							<td>${employee.dname }</td>
+							<%--<td><c:choose>--%>
+									<%--<c:when test="${employee.gender == 1 }">男</c:when>--%>
+									<%--<c:otherwise>女</c:otherwise>--%>
+								<%--</c:choose></td>--%>
+							<td>${employee.gender }</td>
+							<td>${employee.hid }</td>
+							<td>${employee.score }</td>
+							<td>${employee.grade }</td>
+							<td>${employee.deid }</td>
+							<td>${employee.skill }</td>
+							<td>${employee.description }</td>
+							<td>${employee.surgeryweek }</td>
 							<%--<td><f:formatDate value="${employee.createDate}" type="date"--%>
 									<%--dateStyle="long" /></td>--%>
 							<td align="center" width="40px;"><a
-								href="${ctx}/adminUser/update?flag=1&id=${employee.id}">
+								href="${ctx}/doctor/update?flag=1&id=${employee.did}">
 									<img title="修改" src="${ctx}/images/update.gif" />
 							</a></td>
 						</tr>

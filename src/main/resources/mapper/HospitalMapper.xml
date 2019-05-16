@@ -347,4 +347,8 @@
       times = #{times,jdbcType=INTEGER}
     where hid = #{hid,jdbcType=BIGINT}
   </update>
+
+  <select id="findHospitalList" parameterType="com.ming.hospital.pojo.Hospital">
+    SELECT * FROM hospital
+  </select>
 </mapper>
