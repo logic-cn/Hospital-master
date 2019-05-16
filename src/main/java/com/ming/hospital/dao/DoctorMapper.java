@@ -38,4 +38,6 @@ public interface DoctorMapper {
     Doctor selectById(Long id);
 
     List <Doctor> getListByTop4();
+
+    List<Doctor> selectDoctorList();
 }

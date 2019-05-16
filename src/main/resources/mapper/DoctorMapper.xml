@@ -380,4 +380,8 @@
       surgeryWeek = #{surgeryweek,jdbcType=VARCHAR}
     where did = #{did,jdbcType=BIGINT}
   </update>
+
+  <select id="selectDoctorList" resultType="com.ming.hospital.pojo.Doctor">
+    SELECT * FROM doctor;
+  </select>
 </mapper>
