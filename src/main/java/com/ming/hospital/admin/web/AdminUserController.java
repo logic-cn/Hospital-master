@@ -40,4 +40,13 @@ public class AdminUserController {
     public String addAdminUserFrom(){
         return "admin/jsp/user/showAddUser";
     }
+
+    /**
+     * 添加修改操作
+     */
+    @RequestMapping(value = "add", method = RequestMethod.POST)
+    public String addAdminUser(AdminUser user){
+        adminUserService.addUser(user);
+        return "admin/jsp/user/user";
+    }
 }
