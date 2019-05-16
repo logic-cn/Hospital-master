@@ -29,9 +29,6 @@ public class AdminUserController {
     @RequestMapping("list")
     public String getAdminUserList(Model model){
         List<AdminUser> adminUserList = adminUserService.findAdminUserList();
-        for (AdminUser adminUser: adminUserList) {
-            System.out.println(adminUser.toString());
-        }
         model.addAttribute("adminUserList", adminUserList);
         return "admin/jsp/user/user";
     }
