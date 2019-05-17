@@ -81,7 +81,7 @@
 									<tr>
 
 										<td class="font3 fftd">所属医院：
-											<select id="job_id" name="job_id" style="width: 143px;">
+											<select id="job_id" name="hid" style="width: 143px;">
 												<option value="${doctor.hid}" selected="selected">${doctor.hospital.hname}</option>
 												<option value="0">--请选择医院--</option>
 												<c:forEach items="${hospitalList }" var="hospital">

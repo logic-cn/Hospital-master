@@ -39,7 +39,7 @@ public class AdminDoctorServiceImpl implements AdminDoctorService{
 
     @Override
     public void updateDoctor(Doctor doctor) {
-        doctorMapper.updateByPrimaryKey(doctor);
+        doctorMapper.updateByPrimaryKeySelective(doctor);
     }
 
     @Override

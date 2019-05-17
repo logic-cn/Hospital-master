@@ -94,8 +94,8 @@ public class AdminDoctorController {
      */
     @RequestMapping(value = "update", method = RequestMethod.POST)
     public String updateDoctor(Doctor doctor, Model model){
-        System.out.println(doctor.toString());
-        //adminDoctorService.updateDoctor(doctor);
+        //System.out.println(doctor.toString());
+        adminDoctorService.updateDoctor(doctor);
         return "redirect:/doctor/list";
     }
 
