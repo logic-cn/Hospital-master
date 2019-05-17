@@ -79,7 +79,7 @@
 			$.ligerDialog.open({ 
 				title:'预览公告',
 				height: 500, 
-				url: '${ctx}/notice/previewNotice?id='+noticeId, 
+				url: '${ctx}/notice/previewNotice?id='+noticeId,
 				width: 750, 
 				showMax: true, 
 				showToggle: true, 
@@ -120,8 +120,8 @@
 								action="${ctx}/notice/selectNotice">
 								<table width="100%" border="0" cellpadding="0" cellspacing="0">
 									<tr>
-										<td class="font3">公告名称：<input type="text" name="title">
-											公告内容：<input type="text" name="content"> <input
+										<td class="font3">新闻名称：<input type="text" name="title">
+											新闻内容：<input type="text" name="content"> <input
 											type="submit" value="搜索" class="layui-btn layui-btn-xs"/> <input id="delete" type="button"
 											value="删除" class="layui-btn layui-btn-xs"/>
 										</td>
@@ -141,24 +141,30 @@
 					style="border: #c2c6cc 1px solid; border-collapse: collapse;" class="layui-table">
 					<tr class="main_trbg_tit" align="center">
 						<td><input type="checkbox" name="checkAll" id="checkAll"></td>
-						<td>公告名称</td>
+						<%--<td>公告名称</td>
 						<td>公告内容</td>
 						<td>创建时间</td>
 						<td>公告人</td>
 						<td>操作</td>
+						<td>预览</td>--%>
+						<td>新闻名称</td>
+						<td>新闻内容</td>
+					<%--	<td>创建时间</td>--%>
+						<td>操作</td>
 						<td>预览</td>
 					</tr>
-					<c:forEach items="${requestScope.notices}" var="notice"
+					<%--requestScope.notices--%>
+					<c:forEach items="${noticeList}" var="notice"
 						varStatus="stat">
 						<tr id="data_${stat.index}" align="center" class="main_trbg"
 							onMouseOver="move(this);" onMouseOut="out(this);">
 							<td><input type="checkbox" id="box_${stat.index}"
 								value="${notice.id}"></td>
-							<td>${notice.title }</td>
-							<td>${notice.content }</td>
-							<td><f:formatDate value="${notice.createDate}" type="date"
-									dateStyle="long" /></td>
-							<td>${notice.user.username }</td>
+							<td>${notice.noticeName }</td>
+							<td>${notice.noticeDescription }</td>
+							<%--<td><f:formatDate value="${notice.createTime}" type="date"
+									dateStyle="long" /></td>--%>
+							<%--<td>${notice.user.username }</td>--%>
 							<td align="center" width="40px;"><a
 								href="${ctx }/notice/updateNotice?flag=1&id=${notice.id}"><i class="layui-icon layui-icon-edit" style="font-size: inherit;color:#FF5722;">修改</i></a></td>
 							<td align="center" width="40px;"><a href="#"

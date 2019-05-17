@@ -130,11 +130,11 @@
 		<tr valign="top" id="submenu4" style="display: none">
 			<td class="left_nav_bgshw tdbtmline" height="50">
 				<p class="left_nav_link">
-					<a href="notice/selectNotice" target="main">
+					<a href="${ctx}/notice/selectNotice" target="main">
 						<i class="layui-icon layui-icon-triangle-r">新闻查询</i></a>
 				</p>
 				<p class="left_nav_link">
-					<a href="notice/addNotice?flag=1" target="main">
+					<a href="${ctx}/notice/addNotice?flag=1" target="main">
 						<i class="layui-icon layui-icon-add-1">添加新闻</i></a>
 				</p>
 			</td>

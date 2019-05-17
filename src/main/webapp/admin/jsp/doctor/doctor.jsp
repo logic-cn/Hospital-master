@@ -108,18 +108,18 @@
 								action="${ctx}/employee/selectEmployee">
 								<table width="100%" border="0" cellpadding="0" cellspacing="0">
 									<tr>
-										<td class="font3">姓名： <input type="text" name="name">
+										<%--<td class="font3">姓名： <input type="text" name="name">
 											职位： <select name="job.id" style="width: 143px;">
 												<option value="0">--请选择职位--</option>
 												<c:forEach items="${requestScope.jobs }" var="job">
 													<option value="${job.id }">${job.name }</option>
 												</c:forEach>
 										</select>
-										</td>
+										</td>--%>
 
-										<td class="font3">所属部门：<select name="dept.id"
+										<td class="font3">所属医院：<select name="dept.id"
 											style="width: 100px;">
-												<option value="0">--部门选择--</option>
+												<option value="0">--医院选择--</option>
 												<c:forEach items="${requestScope.depts }" var="dept">
 													<option value="${dept.id }">${dept.name }</option>
 												</c:forEach>

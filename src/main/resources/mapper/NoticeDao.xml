@@ -25,16 +25,47 @@
 		where is_useful = 1
 	</select>
 	<!-- 查询通知 -->
-	<!--<select id="findNoticeById" resultType="com.ming.hospital.pojo.Notice">
-		SELECT
-		* FROM `notice`
-		where id = #{id}
-	</select>-->
+
 	<select id="findNoticeById"  resultMap="NoticeResult">
 		SELECT
 		* FROM `notice`
 		where id = #{id}
 	</select>
-	
+
+	<select id="selectNoticeList"  resultMap="NoticeResult">
+		SELECT
+		* FROM `notice`
+
+	</select>
+
+	<select id="selectNoticeById" parameterType="Integer" resultMap="NoticeResult">
+		select * from notice where id = #{id}
+	</select>
+
+	<update id="saveNotice" parameterType="com.ming.hospital.pojo.Notice">
+		update notice
+		<set>
+			<if test="noticeName!=null">
+				notice_name = #{noticeName},
+			</if>
+			<if test="noticeDescription!=null">
+				notice_description = #{noticeDescription},
+			</if>
+
+		</set>
+		where id = #{id}
+	</update>
+
+	<insert id="AddNotice" parameterType="com.ming.hospital.pojo.Notice">
+		insert into notice
+		(notice_name,notice_description)
+		values
+		(#{noticeName},#{noticeDescription})
+	</insert>
+
+	<delete id="deleteNoticeById" parameterType="Integer">
+		delete from notice where
+		id = #{id}
+	</delete>
 
 </mapper>

@@ -34,8 +34,8 @@
 	        
 	        /** 表单提交的校验 */
 	       $("#noticeForm").submit(function(){
-	        	var title = $("#title");
-	        	var content = $("#content");
+	        	var title = $("#noticeName");
+	        	var content = $("#noticeDescription");
 	        	var msg = "";
 	        	if ($.trim(title.val()) == ""){
 					msg = "公告标题不能为空！";
@@ -90,8 +90,8 @@
 					<table width="100%" border="0" cellpadding="0" cellspacing="10"
 						class="main_tab">
 						<tr>
-							<td class="font3 fftd">公告标题：<input type="text" name="title"
-								size="30" id="title" /> <span style="color: #ff0000;"></span>
+							<td class="font3 fftd">新闻标题：<input type="text" name="noticeName"
+								size="30" id="noticeName" /> <span style="color: #ff0000;"></span>
 							</td>
 						</tr>
 						<tr>
@@ -99,8 +99,8 @@
 						</tr>
 
 						<tr>
-							<td class="font3 fftd">公告内容：<br /> <textarea name="content"
-									cols="88" rows="11" id="content"></textarea>
+							<td class="font3 fftd">新闻内容：<br /> <textarea name="noticeDescription"
+									cols="88" rows="11" id="noticeDescription"></textarea>
 							</td>
 						</tr>
 						<tr>

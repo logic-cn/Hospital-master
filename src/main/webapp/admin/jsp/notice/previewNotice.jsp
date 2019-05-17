@@ -15,9 +15,9 @@
 </head>
 <body>
 	<center>
-		<h1>${notice.title }</h1>
+		<h1>${notice.noticeName }</h1>
 	</center>
-	<br /> ${notice.content}
+	<br /> ${notice.noticeDescription}
 
 </body>
 </html>
