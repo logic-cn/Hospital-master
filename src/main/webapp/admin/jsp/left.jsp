@@ -139,6 +139,23 @@
 				</p>
 			</td>
 		</tr>
+
+		<tr>
+			<td height="2"></td>
+		</tr>
+
+		<tr>
+			<td id="navbg5" class="manage"><div class="font1">
+				<div class="left_margin"><i class="layui-icon layui-icon-group">预约管理</i></div></td>
+		</tr>
+		<tr valign="top" id="submenu5" style="display: none">
+			<td class="left_nav_bgshw" height="50">
+				<p class="left_nav_link">
+					<a href="${ctx}/appointment/list" target="main">
+						<i class="layui-icon layui-icon-triangle-r">预约查询</i></a>
+				</p>
+			</td>
+		</tr>
 		<tr>
 			<td height="10" bgcolor="#e5f0ff">&nbsp;</td>
 		</tr>

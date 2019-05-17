@@ -39,5 +39,10 @@ public class AppointmentServiceImpl implements AppointmentService {
         return appointments;
     }
 
+    @Override
+    public void deleteAppointment(Long id) {
+        appointmentMapper.deleteByPrimaryKey(id);
+    }
+
 
 }
