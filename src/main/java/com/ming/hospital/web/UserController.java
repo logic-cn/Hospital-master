@@ -62,7 +62,7 @@ public class UserController {
             session.setAttribute("user",fullUser);
             return "forward:/";
         }
-        request.setAttribute("msg","账号或密码错误！请重新登陆<a href = ''>医者天下</a>");
+        request.setAttribute("msg","账号或密码错误！请重新登陆<a href = ''>名医汇</a>");
         return "error";
     }
     @RequestMapping("/checkUserName")

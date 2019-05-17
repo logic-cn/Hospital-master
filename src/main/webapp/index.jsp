@@ -4,7 +4,7 @@
 <html lang="zh_CN">
 <head>
     <base href="<%=basePath%>">
-    <title>医者天下</title>
+    <title>名医汇</title>
     <meta charset="UTF-8">
     <base target="_self">
     <link rel="stylesheet" href="css/index.css" />

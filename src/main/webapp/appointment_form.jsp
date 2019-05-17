@@ -5,7 +5,7 @@
 <head>
     <base href="<%=basePath%>" >
     <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>医者天下</title>
+    <title>名医汇</title>
     <link rel="stylesheet" href="css/appointment_form.css" />
     <style>
         .header .top-box .top-icon-img {
@@ -121,7 +121,7 @@
                         <td></td>
                         <td>
                             <div class="widget-input">
-                                <input id="agreement" type="checkbox" checked="checked" value=""><label for="agreement">同意</label><span class="agreement"><a href="#" target="_blank">《医者天下用户协议》</a></span><span class="wrong widget-wrong" style="display: none"><i class="instant-state fa fa-times-circle"></i><i>您还未同意用户协议</i></span>
+                                <input id="agreement" type="checkbox" checked="checked" value=""><label for="agreement">同意</label><span class="agreement"><a href="#" target="_blank">《名医汇用户协议》</a></span><span class="wrong widget-wrong" style="display: none"><i class="instant-state fa fa-times-circle"></i><i>您还未同意用户协议</i></span>
                             </div>
                         </td>
                     </tr>

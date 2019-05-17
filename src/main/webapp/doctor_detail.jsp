@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
 <head>
-    <title>医者天下doctor_detail.jsp</title>
+    <title>名医汇doctor_detail.jsp</title>
     <meta charset="UTF-8">
     <base target="_self" href="<%=basePath%>">
     <link rel="stylesheet" href="css/doctor_detail.css" />
@@ -241,14 +241,14 @@
                             <p class="depics"><span class="sq">1.&nbsp;</span><span class="text">每日8:00左右更新后一天号源</span></p>
                             <p class="depics"><span class="sq">2.&nbsp;</span><span class="text">可预约当天和未来2周号源</span></p>
                             <p class="depics"><span class="sq">3.&nbsp;</span><span class="text">请参考短信提示，到医院就诊</span></p>
-                            <p class="depics"><span class="sq">4.&nbsp;</span><span class="text">就诊前一天16:00前，到“我的医者天下”&gt;“我的预约”，可取消预约</span></p>
+                            <p class="depics"><span class="sq">4.&nbsp;</span><span class="text">就诊前一天16:00前，到“我的名医汇”&gt;“我的预约”，可取消预约</span></p>
                             <p class="depics"><span class="sq">5.&nbsp;</span><span class="text">如需帮助，可拨打客服4000-xxx-xxx(10:00-18:00)</span></p>
                         </div>
                     </article>
                     <article class="broad" style="margin-bottom: 0px;">
                         <div class="title">帮助中心<a class="more a-hover" target="_blank" href="#">更多&gt;</a></div>
                         <div class="ct">
-                            <p class="depics"><span class="sq">1.&nbsp;</span><a target="_blank" href="#">医者天下是什么？</a></p>
+                            <p class="depics"><span class="sq">1.&nbsp;</span><a target="_blank" href="#">名医汇是什么？</a></p>
                             <p class="depics"><span class="sq">2.&nbsp;</span><a target="_blank" href="#">如何选择医生？</a></p>
                             <p class="depics"><span class="sq">3.&nbsp;</span><a target="_blank" href="#">如何预约医生？</a></p>
                             <p class="depics"><span class="sq">4.&nbsp;</span><a target="_blank" href="#">如何评价医生？</a></p>

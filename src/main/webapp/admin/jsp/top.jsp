@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>人事管理系统 ——后台登录</title>
+<title>医院预约挂号后台管理系统 ——后台登录</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="no-cache" />
@@ -44,8 +44,9 @@
 				<table width="100%" border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td height="50" class="toplink" align="right">
-						<a href="${ctx}/login"><i class="layui-icon layui-icon-home">网站首页</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="javascript:void(0);" id="exit"><i class="layui-icon layui-icon-refresh-3">注销退出</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<a href="#"><i class="layui-icon layui-icon-home">网站首页</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<%--<a href="javascript:void(0);" id="exit"><i class="layui-icon layui-icon-refresh-3">注销退出</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>--%>
+							<a href="javascript:void(0);" id="exit"><i class="layui-icon layui-icon-refresh-3">注销退出</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 					</tr>
 					<tr>
 						<td height="30" class="topnavbg">

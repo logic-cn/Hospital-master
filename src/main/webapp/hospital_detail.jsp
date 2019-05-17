@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
 <head>
-    <title>医者天下hospital_detail.jsp</title>
+    <title>名医汇hospital_detail.jsp</title>
     <meta charset="UTF-8">
     <base target="_self" href="<%=basePath%>">
     <script src="js/jquery-1.11.2.min.js"></script>
@@ -217,14 +217,14 @@
             <p class="depics"><b class="sq">1.</b>每日8:00左右更新后一天号源</p>
             <p class="depics"><b class="sq">2.</b>可预约当天和未来2周号源</p>
             <p class="depics"><b class="sq">3.</b>请参考短信提示，到医院就诊</p>
-            <p class="depics"><b class="sq">4.</b>就诊前一天16:00前，到“我的医者天下”&gt;“我的预约”，可取消预约</p>
+            <p class="depics"><b class="sq">4.</b>就诊前一天16:00前，到“我的名医汇”&gt;“我的预约”，可取消预约</p>
             <p class="depics"><b class="sq">5.</b>如需帮助，可拨打客服4000-191-191(10:00-18:00)</p>
         </div>
     </article>
     <article class="broad" style="margin-bottom: 0px;">
         <h1 class="title">帮助中心</h1>
         <div class="ct">
-            <p class="depics"><b class="sq">1.</b><a target="_blank" href="#">医者天下是什么？</a></p>
+            <p class="depics"><b class="sq">1.</b><a target="_blank" href="#">名医汇是什么？</a></p>
             <p class="depics"><b class="sq">2.</b><a target="_blank" href="#">如何选择医生？</a></p>
             <p class="depics"><b class="sq">3.</b><a target="_blank" href="#">如何预约医生？</a></p>
             <p class="depics"><b class="sq">4.</b><a target="_blank" href="#">如何评价医生？</a></p>

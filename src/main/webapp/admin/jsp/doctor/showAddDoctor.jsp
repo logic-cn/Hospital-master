@@ -4,7 +4,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>人事管理系统——修改员工</title>
+<title>医院预约挂号后台管理系统——修改员工</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="no-cache" />
@@ -139,8 +139,8 @@
 			<td width="15" height="32"><img
 				src="${ctx}/images/main_locleft.gif" width="15" height="32"></td>
 			<td class="main_locbg font2"><img
-				src="${ctx}/images/pointer.gif">&nbsp;&nbsp;&nbsp;当前位置：员工管理
-				&gt; 修改员工</td>
+				src="${ctx}/images/pointer.gif">&nbsp;&nbsp;&nbsp;当前位置：医生管理
+				&gt; 医生查询</td>
 			<td width="15" height="32"><img
 				src="${ctx}/images/main_locright.gif" width="15" height="32"></td>
 		</tr>

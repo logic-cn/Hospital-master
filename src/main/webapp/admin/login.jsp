@@ -7,7 +7,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>登录-人事管理系统</title>
+<title>登录-医院预约挂号后台管理系统</title>
 <meta http-equiv="x-ua-compatible" content="IE=edge">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache">

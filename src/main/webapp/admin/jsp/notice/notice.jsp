@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>人事管理系统 ——公告管理</title>
+<title>医院预约挂号后台管理系统 ——新闻管理</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="no-cache" />
@@ -100,8 +100,8 @@
 		<tr>
 			<td width="15" height="32"><img
 				src="${ctx}/images/main_locleft.gif" width="15" height="32"></td>
-			<td class="main_locbg font2"><i class="layui-icon layui-icon-location" style="font-size: inherit;"></i>当前位置：公告管理
-				&gt; 公告查询</td>
+			<td class="main_locbg font2"><i class="layui-icon layui-icon-location" style="font-size: inherit;"></i>当前位置：新闻管理
+				&gt; 新闻查询</td>
 			<td width="15" height="32"><img
 				src="${ctx}/images/main_locright.gif" width="15" height="32"></td>
 		</tr>

@@ -52,7 +52,7 @@ public class MailUtil extends Thread  {
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("969130721@qq.com"));
             message.setRecipient(Message.RecipientType.TO,new InternetAddress(user.getEmail()));
-            message.setSubject("医者天下注册激活邮件");
+            message.setSubject("名医汇注册激活邮件");
             String html = "<h2>亲爱的"+user.getName()+"用户你好：</h2><br/>";
             html += "&nbsp&nbsp恭喜你的账号："+user.getUser()+" 注册成功！请48小时内，点击此链接激活" +
                     "<a href = 'http://"+link+"/Hospital/user/active/"+user.getCode()+"'>"

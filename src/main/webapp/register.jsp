@@ -133,7 +133,7 @@
                 <!--表单项-->
                 <div class="box default">
                     <input type="checkbox" id="ck" />
-                    <span>我已阅读并同意<a href="##">《医者天下用户注册协议》</a></span>
+                    <span>我已阅读并同意<a href="##">《名医汇用户注册协议》</a></span>
                 </div>
                 <!--提示信息-->
                 <div class="tip">
