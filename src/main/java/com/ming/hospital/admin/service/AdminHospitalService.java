@@ -10,4 +10,8 @@ import java.util.List;
 public interface AdminHospitalService {
 
     List<Hospital> findHospitalList();
+
+    void updateHospital(Hospital hospital);
+
+    void addHospital(Hospital hospital);
 }

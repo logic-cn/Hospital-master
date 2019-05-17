@@ -25,4 +25,14 @@ public class AdminHospitalServiceImpl implements AdminHospitalService {
     public List<Hospital> findHospitalList() {
         return hospitalMapper.findHospitalList();
     }
+
+    @Override
+    public void updateHospital(Hospital hospital) {
+        hospitalMapper.updateByPrimaryKey(hospital);
+    }
+
+    @Override
+    public void addHospital(Hospital hospital) {
+        hospitalMapper.insert(hospital);
+    }
 }

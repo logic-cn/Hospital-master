@@ -348,7 +348,7 @@
     where hid = #{hid,jdbcType=BIGINT}
   </update>
 
-  <select id="findHospitalList" parameterType="com.ming.hospital.pojo.Hospital">
+  <select id="findHospitalList" resultMap="BaseResultMap">
     SELECT * FROM hospital
   </select>
 </mapper>
