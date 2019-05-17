@@ -32,5 +32,20 @@ public class AdminDoctorServiceImpl implements AdminDoctorService{
         return doctorMapper.selectById(id);
     }
 
+    @Override
+    public void addDoctor(Doctor doctor) {
+        doctorMapper.insert(doctor);
+    }
+
+    @Override
+    public void updateDoctor(Doctor doctor) {
+        doctorMapper.updateByPrimaryKey(doctor);
+    }
+
+    @Override
+    public void deleteDoctor(Long id) {
+        doctorMapper.deleteByPrimaryKey(id);
+    }
+
 
 }

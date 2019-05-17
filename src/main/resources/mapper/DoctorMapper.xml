@@ -381,7 +381,31 @@
     where did = #{did,jdbcType=BIGINT}
   </update>
 
-  <select id="selectDoctorList" resultType="com.ming.hospital.pojo.Doctor">
-    SELECT * FROM doctor;
+  <select id="selectDoctorList" resultMap="selectDoctorListResultMap">
+    select d.*,d.hid as h_id,d.deid as de_id,h.hname,de.dename
+    from doctor d,hospital h,dept de
+    where d.hid = h.hid and d.deid = de.deid
   </select>
+  <resultMap id="selectDoctorListResultMap" type="com.ming.hospital.pojo.Doctor">
+    <id column="did" property="did" jdbcType="BIGINT" />
+    <result column="dname" property="dname" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="hid" property="hid" jdbcType="BIGINT" />
+    <result column="score" property="score" jdbcType="REAL" />
+    <result column="grade" property="grade" jdbcType="INTEGER" />
+    <result column="deid" property="deid" jdbcType="BIGINT" />
+    <result column="skill" property="skill" jdbcType="VARCHAR" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="surgeryWeek" property="surgeryweek" jdbcType="VARCHAR" />
+    <association property="dept" javaType="Dept">
+      <id property="deid" column="de_id"/>
+      <result property="dename" column="dename"/>
+    </association>
+    <association property="hospital" javaType="Hospital">
+      <id property="hid" column="h_id"/>
+      <result property="hname" column="hname"/>
+    </association>
+
+  </resultMap>
 </mapper>

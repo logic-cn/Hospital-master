@@ -1,7 +1,12 @@
 package com.ming.hospital.admin.web;
 
 import com.ming.hospital.admin.service.AdminDoctorService;
+import com.ming.hospital.admin.service.AdminHospitalService;
+import com.ming.hospital.pojo.Dept;
 import com.ming.hospital.pojo.Doctor;
+import com.ming.hospital.pojo.Hospital;
+import com.ming.hospital.service.DeptService;
+import com.ming.hospital.service.DoctorService;
 import org.springframework.beans.Mergeable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,6 +26,12 @@ public class AdminDoctorController {
 
     @Autowired
     private AdminDoctorService adminDoctorService;
+
+    @Autowired
+    private AdminHospitalService adminHospitalService;
+
+    @Autowired
+    private DeptService deptService;
 
     /**
      * 查询医生列表
@@ -37,7 +49,11 @@ public class AdminDoctorController {
      * @return
      */
     @RequestMapping(value = "add",  method = RequestMethod.GET)
-    public String addDoctorFrom(){
+    public String addDoctorFrom(Model model){
+        List<Hospital> hospitalList = adminHospitalService.findHospitalList();
+        List<Dept> deptList = deptService.getList();
+        model.addAttribute("hospitalList", hospitalList);
+        model.addAttribute("deptList", deptList);
         return "/admin/jsp/doctor/showAddDoctor";
     }
 
@@ -49,33 +65,52 @@ public class AdminDoctorController {
     public String updateDoctorFrom(Long id, Model model){
         Doctor doctor = adminDoctorService.selectDoctorById(id);
         model.addAttribute("doctor", doctor);
+        List<Hospital> hospitalList = adminHospitalService.findHospitalList();
+        List<Dept> deptList = deptService.getList();
+        model.addAttribute("hospitalList", hospitalList);
+        model.addAttribute("deptList", deptList);
         return "/admin/jsp/doctor/showUpdateDoctor";
     }
 
 
     /**
-     * 添加修改操作
+     * 添加操作
      * @param doctor
      * @param model
      * @return
      */
     @RequestMapping(value = "add",  method = RequestMethod.POST)
     public String addDoctor(Doctor doctor, Model model){
-        System.out.println(doctor.toString());
-        return "/admin/jsp/doctor/doctor";
+        doctor.setImage("images/yisheng1.png");
+        adminDoctorService.addDoctor(doctor);
+        return "redirect:/doctor/list";
     }
 
     /**
-     * 删除操作
+     * 修改操作
      * @param doctor
      * @param model
      * @return
      */
+    @RequestMapping(value = "update", method = RequestMethod.POST)
+    public String updateDoctor(Doctor doctor, Model model){
+        System.out.println(doctor.toString());
+        //adminDoctorService.updateDoctor(doctor);
+        return "redirect:/doctor/list";
+    }
+
+    /**
+     * 删除操作
+     * @param ids
+     * @return
+     */
     @RequestMapping("delete")
-    public String deleteDoctor(Doctor doctor, Model model){
-
-
-        return null;
+    public String deleteDoctor(String ids){
+        String[] split = ids.split(",");
+        for (String id : split) {
+            adminDoctorService.deleteDoctor(Long.parseLong(id));
+        }
+        return "redirect:/doctor/list";
     }
 
 }

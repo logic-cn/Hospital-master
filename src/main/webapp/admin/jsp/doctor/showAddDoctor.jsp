@@ -152,8 +152,8 @@
 				<form action="${ctx}/doctor/add" id="employeeForm"
 					method="post">
 					<!-- 隐藏表单，flag表示添加标记 -->
-					<input type="hidden" name="flag" value="2"> <input
-						type="hidden" name="did" value="${doctor.did }">
+					<%--<input type="hidden" name="flag" value="2"> <input--%>
+						<%--type="hidden" name="did" value="${doctor.did }">--%>
 					<table width="100%" border="0" cellpadding="0" cellspacing="10"
 						class="main_tab">
 						<tr>
@@ -162,154 +162,58 @@
 									<tr>
 										<td class="font3 fftd">姓名：<input type="text" name="dname"
 											id="name" size="20" value="${doctor.dname }" /></td>
-										<%--<td class="font3 fftd">身份证号码：<input type="text"--%>
-											<%--name="cardId" id="cardId" size="20"--%>
-											<%--value="${employee.cardId }" /></td>--%>
-										<td class="font3 fftd">性别： <select id="sex" name="gender"
-																		   style="width: 143px;">
-											<%--<option value="0">--请选择性别--</option>--%>
-											<%--<option value="${doctor.gender }">男</option>--%>
-											<%--<option value="${doctor.gender }">女</option>--%>
-
-											<c:choose>
-												<c:when test="${doctor.gender eq '男' }">
-													<option value="男" selected="selected">男</option>
-												</c:when>
-												<c:when test="${doctor.gender eq '女' }">
-													<option value="女" selected="selected">女</option>
-												</c:when>
-												<c:otherwise>
-													<option value="0">--请选择性别--</option>
-													<option value="男">男</option>
-													<option value="女">女</option>
-												</c:otherwise>
-
-											</c:choose>
-										</select>
+										<td class="font3 fftd">性别： 
+											<select id="gender" name="gender" style="width: 143px;">
+												<option value="0" selected="selected">--请选择性别--</option>
+												<option value="男">男</option>
+												<option value="女">女</option>
+											</select>
 										</td>
 									</tr>
 									<tr>
-
 										<td class="font3 fftd">所属医院：
-											<select id="job_id" name="job_id" style="width: 143px;">
-												<option value="0">--请选择医院--</option>
-												<c:forEach items="${requestScope.jobs }" var="job">
-													<option value="${job.id }">${job.name }</option>
+											<select id="hid" name="hid" style="width: 143px;">
+												<option value="0" selected="selected">--请选择医院--</option>
+												<c:forEach items="${hospitalList }" var="hospital">
+													<option value="${hospital.hid }">${hospital.hname }</option>
 												</c:forEach>
-										</select>
+											</select>
 										</td>
-										<td class="font3 fftd">分数：<input name="grade"
+										<td class="font3 fftd">分数：<input name="score"
 											id="grade" size="20" value="${doctor.score }" /></td>
 									</tr>
 									<tr>
-										<td class="font3 fftd">等级：<input name="grade"
-											id="education" size="20" value="${doctor.grade }" /></td>
-										<td class="font3 fftd">科室：<input
-											name="deid" id="email" size="20" value="${doctor.deid }" /></td>
-									</tr>
-									<tr>
+										<%--<td class="font3 fftd">等级：<input name="grade"--%>
+											<%--id="education" size="20" value="${doctor.grade }" /></td>--%>
+										<td class="font3 fftd">科室：
+											<select id="deid" name="deid" style="width: 143px;">
+												<option value="0" selected="selected">--请选择科室--</option>
+												<c:forEach items="${deptList }" var="dept">
+													<option value="${dept.deid }">${dept.dename }</option>
+												</c:forEach>
+											</select>
+										</td>
 										<td class="font3 fftd">擅长治疗：<input name="skill" id="skill"
 											size="20" value="${doctor.skill }" /></td>
-										
 									</tr>
 									<tr>
-										<%--<td class="font3 fftd">简介：<input name="description" id="description"
-											size="20" value="${doctor.description }" /></td>--%>
 										<td>
 											简介：
 											<textarea name="description" style="width: 200px;height: 150px;"></textarea>
 										</td>
-
-											<td>
-												工作时间：
-												<textarea name="surgeryweek" style="width: 200px;height: 150px;"></textarea>
-											</td>
-
-									</tr>
-									<%--<tr>--%>
-										<%--<td class="font3 fftd">工作时间：<input name="surgeryweek" id="surgeryweek"&ndash;%&gt;--%>
-											<%--size="20" value="${doctor.surgeryweek }" /></td>
-
-
+										<td>
+											工作时间：
+											<textarea name="surgeryweek" style="width: 200px;height: 150px;"></textarea>
+										</td>
 									</tr>
 
-								</table>
-							</td>
-						</tr>
-						<%--<tr>--%>
-							<%--<td class="main_tdbor"></td>--%>
-						<%--</tr>--%>
-
-						<%--<tr>--%>
-							<%--<td class="font3 fftd">--%>
-								<%--QQ&nbsp;&nbsp;号码：<input name="qqNum" id="qqNum" size="20"--%>
-								<%--value="${employee.qqNum }" />--%>
-							<%--</td>--%>
-						<%--</tr>--%>
-						<%--<tr>--%>
-							<%--<td class="main_tdbor"></td>--%>
-						<%--</tr>--%>
-
-						<%--<tr>--%>
-							<%--<td class="font3 fftd">联系地址：<input name="address"--%>
-								<%--id="address" size="40" value="${employee.address }" />&nbsp;&nbsp;--%>
-								<%--&lt;%&ndash; 邮政编码：<input name="postCode" id="postCode" size="20"--%>
-								<%--value="${employee.postCode }"  &ndash;%&gt;--%>
-								<%----%>
-							<%--</td>--%>
-						<%--</tr>--%>
-						<%--<tr>--%>
-							<%--<td class="main_tdbor"></td>--%>
-						<%--</tr>--%>
-
-						<%--<tr>--%>
-							<%--<td class="font3 fftd">出生日期：<input cssClass="Wdate"--%>
-								<%--onfocus="WdatePicker({skin:'whyGreen',dateFmt:'yyyy-MM-dd'});"--%>
-								<%--name="birthday" id="birthday" size="40" />--%>
-								<%----%>
-							<%--</td>--%>
-						<%--</tr>--%>
-						<%--<tr>--%>
-							<%--<td class="main_tdbor"></td>--%>
-						<%--</tr>--%>
-
-						<%--&lt;%&ndash; <tr>--%>
-							<%--<td class="font3 fftd">所学专业：<input name="speciality"--%>
-								<%--id="speciality" size="40" value="${employee.speciality }" />&nbsp;&nbsp;--%>
-								<%--爱&nbsp;&nbsp;&nbsp;&nbsp;好：<input name="hobby" id="hobby"--%>
-								<%--size="20" value="${employee.hobby }"--%>
-								 <%--/>--%>
-							<%--</td>--%>
-						<%--</tr> &ndash;%&gt;--%>
-						<%--<tr>--%>
-							<%--<td class="main_tdbor"></td>--%>
-						<%--</tr>--%>
-
-						<%--<tr>--%>
-							<%--<td class="font3 fftd">备&nbsp;&nbsp;&nbsp;&nbsp;注：<input--%>
-								<%--name="remark" id="remark" size="40" value="${employee.remark }" />--%>
-								<%--&nbsp;&nbsp;所属部门： <select name="dept_id" style="width: 100px;">--%>
-									<%--<option value="0">--部门选择--</option>--%>
-									<%--<c:forEach items="${requestScope.depts }" var="dept">--%>
-										<%--<c:choose>--%>
-											<%--<c:when test="${employee.dept.id == dept.id }">--%>
-												<%--<option value="${dept.id }" selected="selected">${dept.name }</option>--%>
-											<%--</c:when>--%>
-											<%--<c:otherwise>--%>
-												<%--<option value="${dept.id }">${dept.name }</option>--%>
-											<%--</c:otherwise>--%>
-										<%--</c:choose>--%>
-									<%--</c:forEach>--%>
-							<%--</select>--%>
-							<%--</td>--%>
-						<%--</tr>--%>
 						<tr>
 							<td class="main_tdbor"></td>
 						</tr>
 
 						<tr>
 							<td align="left" class="fftd"><input type="submit"
-								value="修改">&nbsp;&nbsp;<input type="reset" value="取消 " onclick="javascript:window.history.back();return false;" 
+								value="新增">&nbsp;&nbsp;<input type="reset" value="取消 " onclick="javascript:window.history.back();return false;"
 								></td>
 						</tr>
 					</table>

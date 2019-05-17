@@ -69,7 +69,7 @@
 													if (r) {
 														// alert("删除："+ids.get());
 														// 发送请求
-														window.location = "${ctx }/employee/removeEmployee?ids="
+														window.location = "${ctx }/doctor/delete?ids="
 																+ ids.get();
 													}
 												});
@@ -146,7 +146,7 @@
 						<td>性别</td>
 						<td>所属医院</td>
 						<td>分数</td>
-						<td>等级</td>
+						<%--<td>等级</td>--%>
 						<td>科室</td>
 						<td>擅长诊治</td>
 						<td>简介</td>
@@ -159,20 +159,14 @@
 							<td><input type="checkbox" id="box_${stat.index}"
 								value="${employee.did}"></td>
 							<td>${employee.dname }</td>
-							<%--<td><c:choose>--%>
-									<%--<c:when test="${employee.gender == 1 }">男</c:when>--%>
-									<%--<c:otherwise>女</c:otherwise>--%>
-								<%--</c:choose></td>--%>
 							<td>${employee.gender }</td>
-							<td>${employee.hid }</td>
+							<td>${employee.hospital.hname }</td>
 							<td>${employee.score }</td>
-							<td>${employee.grade }</td>
-							<td>${employee.deid }</td>
+							<%--<td>${employee.grade }</td>--%>
+							<td>${employee.dept.dename }</td>
 							<td>${employee.skill }</td>
 							<td>${employee.description }</td>
 							<td>${employee.surgeryweek }</td>
-							<%--<td><f:formatDate value="${employee.createDate}" type="date"--%>
-									<%--dateStyle="long" /></td>--%>
 							<td align="center" width="40px;"><a
 								href="${ctx}/doctor/update?flag=1&id=${employee.did}">
 									<img title="修改" src="${ctx}/images/update.gif" />

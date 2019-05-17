@@ -13,4 +13,10 @@ public interface AdminDoctorService {
 
     Doctor selectDoctorById(Long id);
 
+    void addDoctor(Doctor doctor);
+
+    void updateDoctor(Doctor doctor);
+
+    void deleteDoctor(Long id);
+
 }
