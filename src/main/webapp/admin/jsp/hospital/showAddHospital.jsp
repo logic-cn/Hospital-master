@@ -48,7 +48,7 @@
 		cellspacing="0" class="main_tabbor">
 		<tr valign="top">
 			<td>
-				<form action="${ctx}/doctor/add?id=${hospital.hid}"
+				<form action="${ctx}/hospital/add?id=${hospital.hid}"
 					method="post">
 					<!-- 隐藏表单，flag表示添加标记 -->
 					<input

@@ -14,4 +14,6 @@ public interface AdminHospitalService {
     void updateHospital(Hospital hospital);
 
     void addHospital(Hospital hospital);
+
+    void removeHospital(Long hid);
 }

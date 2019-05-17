@@ -63,8 +63,20 @@ public class AdminHospitalController {
         if (id != null){
             adminHospitalService.updateHospital(hospital);
         }else {
+            hospital.setInsurance(0);
+            hospital.setImage("images/09fa513d269759eeaac0c0eeb5fb43166d22df07.jpg");
+            hospital.setTimes(0);
             adminHospitalService.addHospital(hospital);
         }
-        return "redirect:/adminUser/list";
+        return "redirect:/hospital/list";
+    }
+
+    @RequestMapping("removeHospital")
+    public String deleteHospital(String ids){
+        String[] identifiers= ids.split(",");
+        for (String id:identifiers) {
+            adminHospitalService.removeHospital(Long.parseLong(id));
+        }
+        return "redirect:/hospital/list";
     }
 }

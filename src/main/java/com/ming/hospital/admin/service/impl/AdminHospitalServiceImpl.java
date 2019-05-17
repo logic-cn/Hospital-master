@@ -35,4 +35,9 @@ public class AdminHospitalServiceImpl implements AdminHospitalService {
     public void addHospital(Hospital hospital) {
         hospitalMapper.insert(hospital);
     }
+
+    @Override
+    public void removeHospital(Long hid) {
+        hospitalMapper.deleteByPrimaryKey(hid);
+    }
 }

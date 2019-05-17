@@ -69,7 +69,7 @@
 													if (r) {
 														// alert("删除："+ids.get());
 														// 发送请求
-														window.location = "${ctx }/employee/removeEmployee?ids="
+														window.location = "${ctx }/hospital/removeHospital?ids="
 																+ ids.get();
 													}
 												});
