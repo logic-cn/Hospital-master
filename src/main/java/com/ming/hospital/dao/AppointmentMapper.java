@@ -30,4 +30,6 @@ public interface AppointmentMapper {
 
     Integer selectTimesFromHospital(Long hid);
 
+    void updateStatus(Appointment appointment);
+
 }

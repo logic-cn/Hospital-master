@@ -44,5 +44,10 @@ public class AppointmentServiceImpl implements AppointmentService {
         appointmentMapper.deleteByPrimaryKey(id);
     }
 
+    @Override
+    public void updateStatus(Appointment appointment) {
+        appointmentMapper.updateStatus(appointment);
+    }
+
 
 }

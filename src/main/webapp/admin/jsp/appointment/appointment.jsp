@@ -140,7 +140,8 @@
 						<td>预约时间</td>
 						<td>姓名</td>
 						<td>联系方式</td>
-						<%--<td align="center">操作</td>--%>
+						<td>状态</td>
+						<td align="center">操作</td>-
 					</tr>
 					<c:forEach items="${appointments}" var="appointment"
 						varStatus="stat">
@@ -151,10 +152,23 @@
 							<td>${appointment.visittime }</td>
 							<td>${appointment.name }</td>
 							<td>${appointment.aphone }</td>
-							<%--<td align="center" width="40px;"><a--%>
-								<%--href="${ctx}/doctor/update?flag=1&id=${employee.did}">--%>
-									<%--<img title="修改" src="${ctx}/images/update.gif" />--%>
-							<%--</a></td>--%>
+							<td>
+								<c:choose>
+									<c:when test="${appointment.status eq '1' }">
+										已接受
+									</c:when>
+									<c:when test="${appointment.status eq '2' }">
+										已拒绝
+									</c:when>
+									<c:otherwise>
+										未处理
+									</c:otherwise>
+								</c:choose>
+							</td>
+							<td align="center" width="120px;">
+								<a href="${ctx}/appointment/updateStatus?status=1&id=${appointment.aid}">接受预约</a>
+								<a href="${ctx}/appointment/updateStatus?status=2&id=${appointment.aid}">拒绝预约</a>
+							</td>
 						</tr>
 					</c:forEach>
 				</table>

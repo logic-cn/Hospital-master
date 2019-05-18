@@ -19,4 +19,6 @@ public interface AppointmentService {
 
     void deleteAppointment(Long id);
 
+    void updateStatus(Appointment appointment);
+
 }

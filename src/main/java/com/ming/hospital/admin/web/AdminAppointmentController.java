@@ -35,4 +35,13 @@ public class AdminAppointmentController {
         }
         return "redirect:/appointment/list";
     }
+
+    @RequestMapping("updateStatus")
+    public String updateStatus(String status, String id){
+        Appointment appointment = new Appointment();
+        appointment.setAid(Long.parseLong(id));
+        appointment.setStatus(Integer.parseInt(status));
+        appointmentService.updateStatus(appointment);
+        return "redirect:/appointment/list";
+    }
 }
