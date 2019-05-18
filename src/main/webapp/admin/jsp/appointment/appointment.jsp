@@ -141,7 +141,7 @@
 						<td>姓名</td>
 						<td>联系方式</td>
 						<td>状态</td>
-						<td align="center">操作</td>-
+						<td align="center">操作</td>
 					</tr>
 					<c:forEach items="${appointments}" var="appointment"
 						varStatus="stat">
